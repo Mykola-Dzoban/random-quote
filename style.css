@@ -11,7 +11,8 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: background 0.5s;
+  transition: background-color 0.5s ease;
+  transition: color 0.5s ease;
 }
 
 #quote-box{
@@ -32,6 +33,10 @@ body{
   width: 100%;
   font-size: calc(8px + 2vmin);
   text-align: right;
+}
+#text, #author {
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 .buttons{}
 

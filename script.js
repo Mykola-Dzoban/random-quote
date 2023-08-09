@@ -44,10 +44,20 @@ const generateQuote = (url) => {
     .then((resp) => resp.json())
     .then((data) => {
       let randomColorStyle = randomColor();
-      document.body.style.background = randomColorStyle;
+
+      document.body.style.backgroundColor = randomColorStyle;
       document.body.style.color = randomColorStyle;
-      quoteText.innerText = `❝ ${data[0].quote} ❞`;
-      quoteAuthor.innerText = data[0].author;
+
+      quoteText.style.opacity = 0;
+      quoteAuthor.style.opacity = 0;
+
+      setTimeout(() => {
+        quoteText.innerText = `❝ ${data[0].quote} ❞`;
+        quoteAuthor.innerText = data[0].author;
+
+        quoteText.style.opacity = 1;
+        quoteAuthor.style.opacity = 1;
+      }, 500);
     });
 };
 
@@ -58,6 +68,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 button.addEventListener("click", (event) => {
   event.preventDefault();
-
   generateQuote(URL);
 });
