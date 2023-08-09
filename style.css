@@ -24,6 +24,7 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 }
 #text{
   font-size: calc(16px + 2vmin);
@@ -38,8 +39,20 @@ body{
   opacity: 0;
   transition: opacity 0.5s ease;
 }
-.buttons{}
-
+.buttons{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+button{
+  color: aliceblue;
+  transition: background-color 0.5s ease;
+  border-radius: 5px;
+  border: none;
+  padding: 5px 8px;
+  font-size: calc(10px + 1vmin);
+}
 
 @media (max-width: 1000px) {
   #quote-box{

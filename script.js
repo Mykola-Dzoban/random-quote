@@ -46,6 +46,7 @@ const generateQuote = (url) => {
       let randomColorStyle = randomColor();
 
       document.body.style.backgroundColor = randomColorStyle;
+      button.style.backgroundColor = randomColorStyle;
       document.body.style.color = randomColorStyle;
 
       quoteText.style.opacity = 0;
