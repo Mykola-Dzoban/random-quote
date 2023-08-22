@@ -1,7 +1,6 @@
 const quoteText = document.getElementById("text");
 const quoteAuthor = document.getElementById("author");
 const button = document.getElementById("new-quote");
-
 const API_KEY = "HglsMEXb/A/PvyywG7yMfg==8c2qAtI3d1dOTIZB";
 
 const URL = "https://api.api-ninjas.com/v1/quotes";
@@ -26,7 +25,7 @@ const randomColor = () => {
     "#40393E",
     "#897C87",
   ];
-  const randomColorIndex = Math.floor(Math.random() * colors.length + 1);
+  const randomColorIndex = Math.floor(Math.random() * colors.length);
 
   return colors[randomColorIndex];
 };
@@ -63,7 +62,6 @@ const generateQuote = (url) => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  
   generateQuote(URL);
 });
 
