@@ -46,6 +46,7 @@ body{
   justify-content: end;
 }
 button{
+  cursor: pointer;
   color: aliceblue;
   transition: background-color 0.5s ease;
   border-radius: 5px;
